@@ -74,7 +74,7 @@ class ContactDbHelper(context: Context) :
         return id
     }
 
-    fun deleteContact(dbHelper: ContactDbHelper, id: Long) {
+    fun deleteContact(dbHelper: ContactDbHelper, id: Int) {
         val db = dbHelper.writableDatabase
         db.delete(ContactContract.ContactEntry.TABLE_NAME,
             "${BaseColumns._ID} = ?",
